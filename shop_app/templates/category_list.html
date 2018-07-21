@@ -9,9 +9,9 @@
     </style>
     </head>
 {% for category in categories %} 
-<h2><a href="/categories/{{category.id}}">{{category.title}}</a></h2>
+<h2><a href="{% url 'category_detail' category.id %}">{{category.title}}</a></h2>
 {% for product in category.products.all %}  
-<p><a href="/products/{{ product.id }}">{{product.title}}</a><p>
+<p><a href="{% url 'product_detail' product.id %}">{{product.title}}</a><p>
 {% endfor %}
 {% endfor %}
 	

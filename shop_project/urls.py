@@ -23,6 +23,8 @@ from shop_app import views
 # говорим Джанго о том, что хотим отображать наш вью на главной странице
 # а строчкой ниже, кстати ссылка на нашу админку, про нее позже
 urlpatterns = [ 
-  path('', views.ProductListView.as_view(),name='index'), 
+  path('', views.CategoryListView.as_view(), name='index'), 
   path('admin/', admin.site.urls),
+  path('products/<int:pk>/', views.ProductDetail.as_view(), name='product_detail'),
+  path('categories/<int:pk>/', views.CategoryDetail.as_view(), name='category_detail'),
 ]
