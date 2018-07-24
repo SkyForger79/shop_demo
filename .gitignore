@@ -1,0 +1,7 @@
+/shop_app/migrations/
+/Pipfile
+/.vscode
+### Python ###
+# Byte-compiled / optimized / DLL files
+/__pycache__/
+/*.py[cod]

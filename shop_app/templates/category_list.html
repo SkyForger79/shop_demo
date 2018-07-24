@@ -1,0 +1,17 @@
+<head>
+    <style>
+        a {
+         text-decoration: none;
+        }
+        a:hover {
+         text-decoration: underline;
+        }
+    </style>
+    </head>
+{% for category in categories %} 
+<h2><a href="{% url 'category_detail' category.id %}">{{category.title}}</a></h2>
+{% for product in category.products.all %}  
+<p><a href="{% url 'product_detail' product.id %}">{{product.title}}</a><p>
+{% endfor %}
+{% endfor %}
+	
